@@ -1,32 +1,3 @@
-var counter=999 ;
-
-/*const emp1= {
-    FullName:"Ghazi Samer",
-    EmployeeID: counter ,
-    Department:"Administration",
-    Level:"Senior",
-    imageURL:"/pic/man.jpg" ,
-    Salary:0  ,     
-    uniNum: function(counter){ 
-      this.EmployeeID=counter+1 ;
-      ++counter;} ,
-
-  getRandomSalary:function () { 
-    let Salary=Math.floor(Math.random() *(2000-1500)+1500);
-    let netSalary=Salary-(Salary*.075);
-    this.Salary=netSalary;
-   // console.log("Employee Salary"+Salary);
-   // console.log("Net Tax is "+netSalary);
-  }
-  
-} //Ghazi
-
-emp1.uniNum(counter) ;
-emp1.getRandomSalary();
-console.log("Employee Name ---->",emp1.FullName) ;
-console.log("Employee ID Number---->",emp1.EmployeeID) ;
-console.log("Employee Salary---->",emp1.Salary) ;
-*/
 
         const allUsers=[]; //array
         counter=999;
@@ -55,7 +26,6 @@ console.log("Employee Salary---->",emp1.Salary) ;
         }//constuctor 
 
         document.write("<h1>Welcome To Our Management System</h1><br> <p>Hi hope you see it usefull</p>")
-
 
        User.prototype.print=function(){
        console.log(`${this.FullName} :${this.Department} :${ this.getRandomSalary}`)  ;
