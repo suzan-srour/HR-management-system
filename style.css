@@ -1,4 +1,4 @@
-.p1{
+*{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,3 +14,54 @@
     padding: 8px;
     background-color: #defbe002;
   }
+
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+ .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+  }
+  .flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  .flex-item-right {
+    background-color: rgb(19, 163, 21);
+    padding: 10px;
+    flex: 50%;
+  }
+
+
+body{background-color: #f2d7adde;
+       
+        font-family:Arial, Helvetica, sans-serif;
+        font: 100;
+        }
+
+
+    
+        .card {
+          /* Add shadows to create the "card" effect */
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;
+          background-color: #0a860ede;
+        }
+        
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        
+        /* Add some padding inside the card container */
+        .container {
+          padding: 2px 16px;
+        }
+        
