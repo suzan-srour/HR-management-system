@@ -1,3 +1,8 @@
+       
+       console.log(document) ;
+       const body=document.getElementsByTagName('body') ;
+       const h=document.getElementsByTagName('h1') ;
+       const div=document.getElementsByClassName("card");
 
         let allUsers=[]; //array
         let Id=999;
@@ -55,32 +60,30 @@
 
 
 
-        document.write("<h1>Welcome To Our Management System</h1><br> <p>Hi hope you see it usefull</p>")
-
+    ///////////////////////////////////////////////////
+  
        User.prototype.print=function(){
-        document.write(`<br>`);
-       document.write(
-        `Employee Name :  ${this.FullName}`,
-         `Department :   ${this.Department} `,
-         `Employee Salary   :${ this.Salary}`) ;
+        const pEl=document.createElement('p')
+        pEl.textContent =`Employee Name :${this.FullName}`;
+        pEl.style.color="white";
+       body[0].appendChild(pEl) ;
 
-         document.write(`<br>`);
-      } ;
+       const imgEl1=document.createElement("img") ;
+       imgEl1.src=this.imageURL ;
+       imgEl1.alt=this.FullName ;
+       body[0].appendChild(imgEl1) ;
        
-       //document.write(`<img src=${this.imageURL}>`) ;
+       }
+       //div.appendChild(imgEl1);
+       //div.appendChild(pEl);
 
-
-        /////////////////////// using prototype 
-      
-
-
-      let Ghazi=new User("Ghazi Samer","Administration","Senior","./pic/man.jpg") ;//1
-      let Lana =new User("Lana Ali","Finance","Senior","./pic/woman.jpg") ;//2
-      let Tamara=new User("Tamara Ayoub","Marketing","Senior","./pic/woman.jpg") ;//3
-      let Safi=new User("Safi Waleed","Administration","Mid-Senior","./pic/man.jpg") ;//4
-      let Rana=new User("Rana Salah","Development","Junior","./pic/woman.jpg") ;//5
-      let Hadi=new User("Hadi Ahmad","Finance","Mid-Senior","./pic/man.jpg") ;//6
-      let Omar= new User("Omar Zaid","Development","Senior","./pic/man.jpg") ;//7
+      let Ghazi=new User("Ghazi Samer","Administration","Senior", "assets/Ghazi.jpg",0) ;//1
+      let Lana =new User("Lana Ali","Finance","Senior","assets/Lana.jpg",0) ;//2
+      let Tamara=new User("Tamara Ayoub","Marketing","Senior","assets/Tamara.jpg",0) ;//3
+      let Safi=new User("Safi Waleed","Administration","Mid-Senior","assets/Safi.jpg",0) ;//4
+      let Rana=new User("Rana Salah","Development","Junior","assets/Rana.jpg",0) ;//5
+      let Hadi=new User("Hadi Ahmad","Finance","Mid-Senior","assets/Hadi.jpg",0) ;//6
+      let Omar= new User("Omar Zaid","Development","Senior","assets/Omar.jpg",0) ;//7
 
     console.log(allUsers); 
 
@@ -102,10 +105,6 @@
      Omar.Salary(salary(Omar.Level)) ;
 
 
-    //document.write( `<p>${this.FullName}: ${this.Department} </p>`) ;
-    //document.write(`<img src=${this.imageURL}>`) ;
-
-
 Ghazi.print();
 Lana.print();
 Tamara.print();
@@ -115,4 +114,31 @@ Hadi.print();
 Omar.print();
 
 
+/*
 
+const divEl=document.getElementsByClassName("container");
+
+
+const imgEl2=document.createElement("img") ;
+imgEl2.src="pic/assets/Ghazi.jpg" ;
+imgEl2.alt= "Ghazi picture" ;
+divEl[0].appendChild(imgEl2) ;
+
+
+const imgEl3=document.createElement("img") ;
+imgEl3.src="./assets/Tamara.jpg" ;
+imgEl3.alt="Tamara picture" ;
+divEl[2].appendChild(imgEl3) ; 
+
+
+const imgEl4=document.createElement("img") ;
+imgEl4.src="./assets/Safi.jpg" ;
+imgEl4.alt="Safi picture" ;
+divEl[3].appendChild(imgEl4) ;
+
+
+
+const imgEl5=document.createElement("img") ;
+imgEl5.src="./assets/Safi.jpg" ;
+imgEl5.alt="Safi picture" ;
+divEl[4].appendChild(imgEl5) ;*/
