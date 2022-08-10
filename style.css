@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+  
   }
   
   .p1 {
@@ -14,8 +15,30 @@
     padding: 8px;
     background-color: #defbe002;
   }
+  footer {
+    text-align:left;
+    padding: 2px;;
+    background-color: DarkSalmon;
+    color: white;
+  }
 
 
+
+  page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  content-wrap {
+    padding-bottom: 2.2rem;    /* Footer height */
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.2rem;            /* Footer height */
+  }
 
   * {
     box-sizing: border-box;
@@ -34,7 +57,7 @@
   }
   
   .flex-item-right {
-    background-color: rgb(19, 163, 21);
+    background-color: rgb(200, 237, 200);
     padding: 10px;
     flex: 50%;
   }
@@ -52,7 +75,7 @@ body{background-color: #f2d7adde;
           /* Add shadows to create the "card" effect */
           box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
           transition: 0.3s;
-          background-color: #0a860ede;
+          background-color: #dea24789;
         }
         
         /* On mouse-over, add a deeper shadow */

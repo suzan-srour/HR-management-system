@@ -2,7 +2,7 @@
        console.log(document) ;
        const body=document.getElementsByTagName('body') ;
        const h=document.getElementsByTagName('h1') ;
-       const div=document.getElementsByClassName("card");
+       //const cards=document.querySelector(".cards");
 
         let allUsers=[]; //array
         let Id=999;
@@ -14,7 +14,7 @@
          this.EmployeeID=idValue ;
          this.Department=departmentValue ;
          this.Level=levelValue;
-         this.imageURL =imagValue;
+         this.imageURL=imagValue;
          this.Salary=salaryValue; 
 
         this.AddId=function(Id){
@@ -60,24 +60,36 @@
 
 
 
-    ///////////////////////////////////////////////////
+    ///////////////////////////////////////////////////render fun 
   
        User.prototype.print=function(){
-        const pEl=document.createElement('p')
-        pEl.textContent =`Employee Name :${this.FullName}`;
-        pEl.style.color="white";
-       body[0].appendChild(pEl) ;
+      
 
-       const imgEl1=document.createElement("img") ;
-       imgEl1.src=this.imageURL ;
-       imgEl1.alt=this.FullName ;
-       body[0].appendChild(imgEl1) ;
-       
+        const imgE1 = document.createElement('img');
+        imgE1.src= this.imageURL;
+        imgE1.alt= this.FullName;
+      
+      
+        const pE1 = document.createElement('p');
+        pE1.textContent= `Name  :${this.FullName} - ID:${this.EmployeeID}   `;
+        const pE2 = document.createElement('p');
+        pE2.textContent= `Department :${this.Department} - Level: ${this.Level} `;
+        const pE3 = document.createElement('p');
+        pE3.textContent= `Salary :${this.Salary} `;
+        
+        let divE=document.createElement("div");
+        divE.classList.add("card");
+        divE.classList.add("flex");
+        divE.appendChild(imgE1);
+        divE.appendChild(pE1);
+        divE.appendChild(pE2);
+        divE.appendChild(pE3);
+      
+      body[0].appendChild(divE);
        }
-       //div.appendChild(imgEl1);
-       //div.appendChild(pEl);
 
-      let Ghazi=new User("Ghazi Samer","Administration","Senior", "assets/Ghazi.jpg",0) ;//1
+
+      let Ghazi=new User("Ghazi Samer","Administration","Senior","pic/Ghazi.jpg",0) ;//1
       let Lana =new User("Lana Ali","Finance","Senior","assets/Lana.jpg",0) ;//2
       let Tamara=new User("Tamara Ayoub","Marketing","Senior","assets/Tamara.jpg",0) ;//3
       let Safi=new User("Safi Waleed","Administration","Mid-Senior","assets/Safi.jpg",0) ;//4
@@ -112,33 +124,3 @@ Safi.print() ;
 Rana.print() ;
 Hadi.print();
 Omar.print();
-
-
-/*
-
-const divEl=document.getElementsByClassName("container");
-
-
-const imgEl2=document.createElement("img") ;
-imgEl2.src="pic/assets/Ghazi.jpg" ;
-imgEl2.alt= "Ghazi picture" ;
-divEl[0].appendChild(imgEl2) ;
-
-
-const imgEl3=document.createElement("img") ;
-imgEl3.src="./assets/Tamara.jpg" ;
-imgEl3.alt="Tamara picture" ;
-divEl[2].appendChild(imgEl3) ; 
-
-
-const imgEl4=document.createElement("img") ;
-imgEl4.src="./assets/Safi.jpg" ;
-imgEl4.alt="Safi picture" ;
-divEl[3].appendChild(imgEl4) ;
-
-
-
-const imgEl5=document.createElement("img") ;
-imgEl5.src="./assets/Safi.jpg" ;
-imgEl5.alt="Safi picture" ;
-divEl[4].appendChild(imgEl5) ;*/
